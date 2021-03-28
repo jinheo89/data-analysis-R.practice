@@ -1,13 +1,18 @@
 ## 시계열 데이터 분석
 - R을 활용하여 시계열 데이터 분석
 
-setwd("C:/Rworks") #워킹디렉토리 설정
-gendata<-read.csv("solor_power_generation.csv", header = TRUE) #데이터파일을 읽고 변수에 저장
+#워킹디렉토리 설정
+setwd("C:/Rworks") 
+
+#데이터파일을 읽고 변수에 저장
+gendata<-read.csv("solor_power_generation.csv", header = TRUE) Cancel Changes
 head(gendata)
 
 #dplyr패키지 활용
 library(dplyr)
-gen1 <- filter(gendata,gendata[,2]==1, .preserve = FALSE ) #발전소 1호기의 발전량만 추출하여 변수에 저장
+
+#발전소 1호기의 발전량만 추출하여 변수에 저장
+gen1 <- filter(gendata,gendata[,2]==1, .preserve = FALSE ) 
 
 #as.date()함수 활용하여 문자열을 날짜로 변환
 time<-gen1[,1]
