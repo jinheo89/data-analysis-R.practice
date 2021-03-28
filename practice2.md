@@ -16,13 +16,13 @@ gen1 <- filter(gendata,gendata[,2]==1, .preserve = FALSE )
 
 #as.date()함수 활용하여 문자열을 날짜로 변환
 time<-gen1[,1]
-y<-as.Date(time)
+x<-as.Date(time)
 generation<-gen1[,"X8"]
-dt<-data.frame(y,generation)
+dt<-data.frame(x,generation)
 
 #xts()함수를 활용하여 데이터를 시계열로 변환
 library(xts)
-power<-xts(dt$generation, order.by = dt$y)
+power<-xts(dt$generation, order.by = dt$x)
 
 #시계열 그래프 생성
 libary(dygraphs)
