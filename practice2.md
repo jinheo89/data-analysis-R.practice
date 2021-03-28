@@ -24,4 +24,6 @@ dt<-data.frame(y,generation)
 library(xts)
 power<-xts(dt$generation, order.by = dt$y)
 
-dygraph(power) #시계열 그래프 생성
+#시계열 그래프 생성
+libary(dygraphs)
+dygraph(power) 
