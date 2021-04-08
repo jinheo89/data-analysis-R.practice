@@ -1,3 +1,4 @@
+## 한국남동발전 오픈데이터 분석 연습
 - 출처: https://www.data.go.kr/data/15050344/fileData.do
 - 파일형식: .csv
 - .csv파일을 통해 데이터 패턴을 파악한다.
